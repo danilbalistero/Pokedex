@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokédex</title>
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-hollow" rel="stylesheet">
+                
 </head>
+
+<style>
+    @import url('https://fonts.cdnfonts.com/css/pokemon-hollow');
+</style>
+
 <body>
     <h1>Pokédex</h1>
+    <button class="cadastrar-btn" onclick="location.href='/pokemons/new'">Cadastrar Pokémon</button>
     <ul>
         <% pokemons.forEach(function(pokemon) { %>
             <li>
-                <a href="/pokemon/<%= pokemon.id %>"><%= pokemon.nome %</a> - <%= pokemon.tipo %>
-            </li>    
-        <%}); %>
+                <a href="/pokemon/<%= pokemon.id %>"><%= pokemon.nome %></a> -
+                <%= pokemon.tipo %>
+            </li>
+        <% }); %>
     </ul>
 </body>
 </html>

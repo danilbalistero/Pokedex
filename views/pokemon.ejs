@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></%= pokemon.nome %></title>
+    <title><%= pokemon.nome %></title>
+    <link rel="stylesheet" href="/quempokemon.css">
 </head>
 <body>
-    <h1><%= pokemon.nome %></h1>
-    <p>Tipo: <%= pokemon.tipo %></p>
-    <a href="/">Voltar à Pokédex</a>
+    <div class="pokemon-container">
+        <h1><%= pokemon.nome %></h1>
+        <p>Tipo: <%= pokemon.tipo %></p>
+        <a href="/">Voltar à Pokédex</a>
+    </div>
 </body>
 </html>
