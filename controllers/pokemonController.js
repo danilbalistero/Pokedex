@@ -20,8 +20,8 @@ const getCreatePokemonForm = (req, res) => {
 
 const createPokemon = (req, res) => {
     const { nome, tipo } = req.body;
-    pokemonModel.createPokemon(nome, tipo);  // Chamando o método no modelo
-    res.redirect('/');  // Redireciona para a página inicial após o cadastro
+    pokemonModel.createPokemon(nome, tipo);
+    res.redirect('/');
 };
 
 module.exports = { getAllPokemons, getPokemon, getCreatePokemonForm, createPokemon };
