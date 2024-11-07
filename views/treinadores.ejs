@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Treinadores</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-hollow" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Treinadores</h1>
+    <ul>
+        <% treinadores.forEach(function(treinador) { %>
+            <li>
+                <strong><%= treinador.nome %></strong>
+                <ul>
+                    <% treinador.pokemons.forEach(function(pokemon) { %>
+                        <li><%= pokemon.nome %> - <%= pokemon.tipo %></li>
+                    <% }); %>
+                </ul>
+            </li>
+        <% }); %>
+    </ul>
+    <a href="/">Voltar à Pokédex</a>
+</body>
+</html>
